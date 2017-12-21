@@ -1,9 +1,9 @@
 {contentType xml}
 <SHOPITEM>
     <ITEM_ID n:ifset="$item->itemId">{$item->itemId}</ITEM_ID>
-    <PRODUCTNAME>{$item->productName}</PRODUCTNAME>
-    <PRODUCT n:if="$item->product">{$item->product}</PRODUCT>
-    <DESCRIPTION>{$item->description}</DESCRIPTION>
+    <PRODUCTNAME><![CDATA[{$item->productName}]]></PRODUCTNAME>
+    <PRODUCT n:if="$item->product"><![CDATA[{$item->product}]]></PRODUCT>
+    <DESCRIPTION><![CDATA[{$item->description}]]></DESCRIPTION>
     <URL>{$item->url}</URL>
 
     {if !empty($images = $item->images)}
@@ -23,8 +23,8 @@
         </PARAM>
     {/if}
 
-    <MANUFACTURER n:if="$item->manufacturer">{$item->manufacturer}</MANUFACTURER>
-    <CATEGORYTEXT n:if="$item->categoryText">{$item->categoryText}</CATEGORYTEXT>
+    <MANUFACTURER n:if="$item->manufacturer"><![CDATA[{$item->manufacturer}]]></MANUFACTURER>
+    <CATEGORYTEXT n:if="$item->categoryText"><![CDATA[{$item->categoryText}]]></CATEGORYTEXT>
     <EAN n:if="$item->ean">{$item->ean}</EAN>
     <ISBN n:if="$item->isbn">{$item->isbn}</ISBN>
     <HEUREKA_CPC n:if="isset($item->heurekaCpc) && $item->heurekaCpc>0">{$item->heurekaCpc}</HEUREKA_CPC>
