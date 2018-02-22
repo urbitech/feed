@@ -86,6 +86,8 @@ class Item extends BaseItem {
     /** @var bool */
     protected $identifierExists;
 
+    protected $labels = [];
+
     /**
      * @return string
      */
@@ -422,12 +424,30 @@ class Item extends BaseItem {
         return $this;
     }
 
-    /**
-     * @return Image[]
-     */
-    public function getImages()
-    {
-        return $this->images;
-    }
+	/**
+	 * @return Image[]
+	 */
+	public function getImages()
+	{
+		return $this->images;
+	}
+
+	/**
+	 * @return array
+	 */
+	public function getLabels()
+	{
+		return $this->labels;
+	}
+
+	public function addLabel($label)
+	{
+		$this->labels[] = $label;
+	}
+
+	public function setLabels(array $labels)
+	{
+		$this->labels = $labels;
+	}
 
 }
