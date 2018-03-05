@@ -7,6 +7,7 @@ use Mk\Feed\Generators\BaseItem;
 
 /**
  * Class Item
+ * @property string $id
  * @author Martin Knor <martin.knor@gmail.com>
  * @package Mk\Feed\Generators\Google
  */
