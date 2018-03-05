@@ -459,7 +459,7 @@ class Item extends BaseItem {
     /**
      * @return string
      */
-    public function getItemGroupId(): string {
+    public function getItemGroupId(): ?string {
         return $this->itemGroupId;
     }
 

@@ -37,6 +37,5 @@
 
 
     <g:item_group_id n:if="$item->itemGroupId">{$item->itemGroupId}</g:item_group_id>
-    {dump $item->params}
     {*<g:{$name|lower} n:foreach="$item->params as $name => $value" n:if="(!empty($item->params))">{$value}</g:{$name|lower}>*}
 </entity>
