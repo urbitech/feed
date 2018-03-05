@@ -1,20 +1,20 @@
 {contentType xml}
 <item>
     <g:id>{$item->id}</g:id>
-    <g:title>{$item->title}</g:title>
-    <g:description>{$item->description}</g:description>
-    <g:link>{$item->link}</g:link>
+    <g:title><![CDATA[{$item->title}]]></g:title>
+    <g:description><![CDATA[{$item->description}]]></g:description>
+    <g:link><![CDATA[{$item->link}]]></g:link>
 
     {if !empty($images = $item->images)}
         {foreach $images as $image}
             {var tag = $iterator->first ? 'g:image_link' : 'g:additional_image_link'}
-            <{$tag}>{$image->url}</{$tag}>
+            <{$tag}><![CDATA[{$image->url}]]></{$tag}>
         {/foreach}
     {/if}
 
     <g:condition n:if="$item->condition">{$item->condition}</g:condition>
     <g:availability n:if="$item->availability">{$item->availability}</g:availability>
-    <g:price>{$item->price}</g:price>
+    <g:price>{$item->price} CZK</g:price>
     <g:sale_price n:if="$item->salePrice">{$item->salePrice}</g:sale_price>
     <g:gtin n:if="$item->gtin">{$item->gtin}</g:gtin>
     <g:brand n:if="$item->brand">{$item->brand}</g:brand>
