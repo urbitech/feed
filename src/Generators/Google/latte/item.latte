@@ -1,9 +1,9 @@
 {contentType xml}
 <item>
     <g:id>{$item->id}</g:id>
-    <g:title><![CDATA[{$item->title}]]></g:title>
-    <g:description><![CDATA[{$item->description}]]></g:description>
-    <g:link><![CDATA[{$item->link}]]></g:link>
+    <title><![CDATA[{$item->title}]]></title>
+    <description><![CDATA[{$item->description}]]></description>
+    <link><![CDATA[{$item->link}]]></link>
 
     {if !empty($images = $item->images)}
         {foreach $images as $image}
