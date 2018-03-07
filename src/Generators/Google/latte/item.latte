@@ -2,7 +2,7 @@
 <item>
     <g:id>{$item->id}</g:id>
     <title><![CDATA[{$item->title}]]></title>
-    <description><![CDATA[{$item->description}]]></description>
+    <description><![CDATA[{$item->description|noescape}]]></description>
     <link><![CDATA[{$item->link}]]></link>
 
     {if !empty($images = $item->images)}
