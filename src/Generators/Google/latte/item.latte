@@ -27,7 +27,7 @@
     <g:age_group>Adult</g:age_group>
     <g:color>Navy</g:color>
     <g:size>8 Standard</g:size>*}
-    <g:mpn n:if="$item->mpn">{$item->mpn}</g:mpn>
+    <g:mpn>{if $item->mpn}{$item->mpn}{/if}</g:mpn>
 
     {if !empty($productTypes = $item->productTypes)}
         <g:product_type n:foreach="$productTypes as $productType" n:if="!empty($productType->text)">{$productType->text}</g:product_type>
