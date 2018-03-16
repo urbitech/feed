@@ -3,7 +3,7 @@
     <ITEM_ID n:ifset="$item->itemId">{$item->getItemId()}</ITEM_ID>
     <PRODUCTNAME><![CDATA[{$item->getProductName()}]]></PRODUCTNAME>
     <PRODUCT n:if="$item->getProduct()"><![CDATA[{$item->getProduct()}]]></PRODUCT>
-    <DESCRIPTION><![CDATA[{$item->getDescription()}]]></DESCRIPTION>
+    <DESCRIPTION><![CDATA[{$item->getDescription()|striptags|noescape}]]></DESCRIPTION>
     <URL>{$item->getUrl()}</URL>
 
     {if !empty($images = $item->getImages())}
@@ -19,7 +19,7 @@
     {if !empty($parameters = $item->getParameters())}
         <PARAM n:foreach="$parameters as $parameter">
             <PARAM_NAME>{$parameter->getName()}</PARAM_NAME>
-            <VAL>{$parameter->getValue()}</VAL>
+            <VAL>{$parameter->getValue()}{$parameter->getUnit()}</VAL>
         </PARAM>
     {/if}
 
@@ -34,7 +34,7 @@
         <DELIVERY n:foreach="$deliveries as $delivery">
             <DELIVERY_ID>{$delivery->id}</DELIVERY_ID>
             <DELIVERY_PRICE>{$delivery->price}</DELIVERY_PRICE>
-            <DELIVERY_PRICE_COD n:if="isset($delivery->priceCod)">{$delivery->priceCod}</DELIVERY_PRICE_COD>
+            <DELIVERY_PRICE_COD n:if="$delivery->priceCod">{$delivery->priceCod}</DELIVERY_PRICE_COD>
         </DELIVERY>
     {/if}
 
