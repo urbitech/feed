@@ -27,6 +27,7 @@
     <g:age_group>Adult</g:age_group>
     <g:color>Navy</g:color>
     <g:size>8 Standard</g:size>*}
+    <g:unit_pricing_measure n:if="$item->unitPricingMeasure">{$item->unitPricingMeasure}</g:unit_pricing_measure>
     <g:mpn n:if="$item->mpn">{$item->mpn}</g:mpn>
 
     {if !empty($productTypes = $item->productTypes)}
