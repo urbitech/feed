@@ -87,6 +87,9 @@ class Item extends BaseItem {
     protected $identifierExists;
 
     protected $labels = [];
+	
+    /** @var string */
+    protected $unitPricingMeasure;
 
     /**
      * @return string
@@ -448,6 +451,17 @@ class Item extends BaseItem {
 	public function setLabels(array $labels)
 	{
 		$this->labels = $labels;
+	}
+	
+	public function getUnitPricingMeasure(): string
+	{
+		return $this->unitPricingMeasure;
+	}
+
+
+	public function setUnitPricingMeasure(string $unitPricingMeasure): void
+	{
+		$this->unitPricingMeasure = $unitPricingMeasure;
 	}
 
 }
