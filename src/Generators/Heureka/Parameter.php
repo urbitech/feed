@@ -16,16 +16,20 @@ class Parameter {
 
     protected $name;
     protected $value;
+    protected $unit;
 
     /**
      * Parameter constructor.
      * @param $name
      * @param $value
+     * @param $unit
      */
-    public function __construct($name, $value)
+    public function __construct($name, $value, $unit = null)
     {
         $this->name = $name;
         $this->value = $value;
+
+        $this->unit = $unit;
     }
 
     /**
@@ -43,5 +47,13 @@ class Parameter {
     {
         return $this->value;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getUnit() {
+        return $this->unit;
+    }
+
 
 }

@@ -7,6 +7,7 @@ use Mk\Feed\Generators\BaseItem;
 
 /**
  * Class Item
+ * @property string $id
  * @author Martin Knor <martin.knor@gmail.com>
  * @package Mk\Feed\Generators\Google
  */
@@ -87,6 +88,12 @@ class Item extends BaseItem {
     protected $identifierExists;
 
     protected $labels = [];
+
+    /** @var string */
+    protected $itemGroupId;
+
+    /** @var array */
+    protected $params;
 
     /**
      * @return string
@@ -449,5 +456,37 @@ class Item extends BaseItem {
 	{
 		$this->labels = $labels;
 	}
+
+    /**
+     * @return string
+     */
+    public function getItemGroupId(): ?string {
+        return $this->itemGroupId;
+    }
+
+    /**
+     * @param string $itemGroupId
+     */
+    public function setItemGroupId(string $itemGroupId): void {
+        $this->itemGroupId = $itemGroupId;
+    }
+
+    public function addParam($name, $value){
+        $this->params[$name] = $value;
+    }
+
+    /**
+     * @return array
+     */
+    public function getParams(): array {
+        return $this->params;
+    }
+
+
+
+
+
+
+
 
 }
