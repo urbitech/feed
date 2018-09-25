@@ -26,6 +26,15 @@ class Item extends BaseItem {
     /** @var \DateTime|int @required */
     protected $deliveryDate;
 
+    /** @var Delivery|null */
+    protected $deliveryId;
+
+    /** @var float|null */
+    protected $deliveryPrice;
+
+    /** @var float|null */
+    protected $deliveryPriceCod;
+
     #recomanded
     /** @var string|null */
     protected $itemId;
@@ -596,5 +605,56 @@ class Item extends BaseItem {
     {
         return $this->parameters;
     }
+
+    /**
+     * @return Delivery|null
+     */
+    public function getDeliveryId() {
+        return $this->deliveryId;
+    }
+
+    /**
+     * @param Delivery|null $deliveryId
+     * @return Item
+     */
+    public function setDeliveryId($deliveryId) {
+        $this->deliveryId = $deliveryId;
+        return $this;
+    }
+
+
+
+    /**
+     * @return float|null
+     */
+    public function getDeliveryPrice() {
+        return $this->deliveryPrice;
+    }
+
+    /**
+     * @param float|null $deliveryPrice
+     * @return Item
+     */
+    public function setDeliveryPrice($deliveryPrice) {
+        $this->deliveryPrice = $deliveryPrice;
+        return $this;
+    }
+
+    /**
+     * @return float|null
+     */
+    public function getDeliveryPriceCod() {
+        return $this->deliveryPriceCod;
+    }
+
+    /**
+     * @param float|null $deliveryPriceCod
+     * @return Item
+     */
+    public function setDeliveryPriceCod($deliveryPriceCod) {
+        $this->deliveryPriceCod = $deliveryPriceCod;
+        return $this;
+    }
+
 
 }
