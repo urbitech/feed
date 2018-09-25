@@ -599,6 +599,23 @@ class Item extends BaseItem {
         return $this->parameters;
     }
 
+    /**
+     * @return Delivery|null
+     */
+    public function getDelivery() {
+        return $this->delivery;
+    }
+
+    /**
+     * @param Delivery|null $delivery
+     * @return Item
+     */
+    public function setDelivery($delivery) {
+        $this->delivery = $delivery;
+        return $this;
+    }
+
+    
 
 
 
