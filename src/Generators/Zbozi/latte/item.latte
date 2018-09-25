@@ -5,10 +5,10 @@
     <URL>{$item->getUrl()}</URL>
     <PRICE_VAT>{$item->getPriceVat()}</PRICE_VAT>
     <DELIVERY_DATE>{$item->getDeliveryDate()}</DELIVERY_DATE>
-    <DELIVERY n:if="$item->deliveryId">
-        <DELIVERY_ID n:if="$item->getDeliveryId()">{$item->getDeliveryId()}</DELIVERY_ID>
-        <DELIVERY_PRICE n:if="$item->getDeliveryPrice()">{$item->getDeliveryPrice()}</DELIVERY_PRICE>
-        <DELIVERY_PRICE_COD n:if="$item->getDeliveryPriceCod()">{$item->getDeliveryPriceCod()}</DELIVERY_PRICE_COD>
+    <DELIVERY n:if="$item->delivery">
+        <DELIVERY_ID>{$delivery->id}</DELIVERY_ID>
+        <DELIVERY_PRICE>{$delivery->price}</DELIVERY_PRICE>
+        <DELIVERY_PRICE_COD n:if="$delivery->priceCod">{$delivery->priceCod}</DELIVERY_PRICE_COD>
     </DELIVERY>
 
     <ITEM_ID n:if="$item->getItemId()">{$item->getItemId()}</ITEM_ID>
