@@ -10,8 +10,10 @@ use Mk, Nette;
  * @author Martin Knor <martin.knor@gmail.com>
  * @package Mk\Feed\Generators\Zbozi
  */
-abstract class BaseItem extends Nette\Object implements Mk\Feed\Generators\IItem
+abstract class BaseItem implements Mk\Feed\Generators\IItem
 {
+
+    use Nette\SmartObject;
 
 	/**
 	 * Validate item

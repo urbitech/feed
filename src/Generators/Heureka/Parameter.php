@@ -9,7 +9,9 @@ use Mk, Nette;
  * @author Martin Knor <martin.knor@gmail.com>
  * @package Mk\Feed\Generators\Heureka
  */
-class Parameter extends Nette\Object {
+class Parameter{
+
+    use Nette\SmartObject;
 
     protected $name;
     protected $value;

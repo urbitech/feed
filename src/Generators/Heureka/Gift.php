@@ -9,7 +9,9 @@ use Mk, Nette;
  * @author Martin Knor <martin.knor@gmail.com>
  * @package Mk\Feed\Generators\Heureka
  */
-class Gift extends Nette\Object {
+class Gift{
+
+    use Nette\SmartObject;
 
     /** @var string */
     protected $name;

@@ -3,7 +3,7 @@ namespace Mk\Feed\Generators;
 
 use Latte\Engine;
 use Mk\Feed\Storage;
-use Nette\Object;
+use Nette\SmartObject;
 use Mk\Feed\FileEmptyException;
 use Mk\Feed\ItemIncompletedException;
 
@@ -12,7 +12,9 @@ use Mk\Feed\ItemIncompletedException;
  * @author Martin Knor <martin.knor@gmail.com>
  * @package Mk\Feed\Generators
  */
-abstract class BaseGenerator extends Object implements IGenerator {
+abstract class BaseGenerator implements IGenerator {
+
+    use SmartObject;
 
     /** @var bool true if some products added */
     private $prepared = false;

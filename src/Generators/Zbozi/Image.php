@@ -4,7 +4,10 @@ namespace Mk\Feed\Generators\Zbozi;
 
 use Mk, Nette;
 
-class Image extends Nette\Object {
+class Image{
+
+    use Nette\SmartObject;
+
     private $url;
 
     /**

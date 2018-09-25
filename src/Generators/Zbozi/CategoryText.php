@@ -10,8 +10,10 @@ use Nette;
  * @author Martin Knor <martin.knor@gmail.com>
  * @package Mk\Feed\Generators\Zbozi
  */
-class CategoryText extends Nette\Object {
-   
+class CategoryText{
+
+    use Nette\SmartObject;
+
 
     /** @var string */
     protected $text;

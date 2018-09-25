@@ -10,8 +10,11 @@ use Mk, Nette;
  * @author Martin Knor <martin.knor@gmail.com>
  * @package Mk\Feed\Generators\Google
  */
-class Image extends Nette\Object
+class Image
 {
+
+    use Nette\SmartObject;
+
     /** @var string */
     private $url;
 

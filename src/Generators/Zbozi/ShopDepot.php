@@ -4,7 +4,9 @@ namespace Mk\Feed\Generators\Zbozi;
 
 use Mk, Nette;
 
-class ShopDepot extends Nette\Object {
+class ShopDepot{
+
+    use Nette\SmartObject;
 
     private $id;
 

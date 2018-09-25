@@ -10,7 +10,9 @@ use Mk, Nette;
  * @package Mk\Feed\Generators\Zbozi
  * @see http://napoveda.seznam.cz/cz/zbozi/specifikace-xml-pro-obchody/specifikace-xml-feedu/#PARAM
  */
-class Parameter extends Nette\Object {
+class Parameter{
+
+    use Nette\SmartObject;
 
     protected $name;
     protected $value;

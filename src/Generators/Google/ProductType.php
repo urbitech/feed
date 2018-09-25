@@ -10,8 +10,9 @@ use Nette;
  * @author Martin Knor <martin.knor@gmail.com>
  * @package Mk\Feed\Generators\Google
  */
-class ProductType extends Nette\Object {
-   
+class ProductType{
+
+    use Nette\SmartObject;
 
     /** @var string */
     protected $text;
