@@ -74,6 +74,9 @@ class Item extends BaseItem {
     /** @var string |null*/
     protected $sku;
 
+    /** @var string[] */
+    protected $suppliers;
+
     /** @var string | null */
     protected $availability;
 
@@ -959,6 +962,23 @@ class Item extends BaseItem {
         $this->sku = $sku;
         return $this;
     }
+
+    /**
+     * @return string[]
+     */
+    public function getSuppliers(): ?array {
+        return $this->suppliers;
+    }
+
+    /**
+     * @param string[] $supplier
+     * @return Item
+     */
+    public function addSupplier(string $supplier): Item {
+        $this->suppliers[] = $supplier;
+        return $this;
+    }
+
 
 
 
