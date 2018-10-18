@@ -37,7 +37,10 @@ class Delivery{
         UPS = 'UPS',
         ULOZENKA = 'ULOZENKA',
         VLASTNI_PREPRAVA = 'VLASTNI_PREPRAVA',
-        ZASILKOVNA = 'ZASILKOVNA';
+        ZASILKOVNA = 'ZASILKOVNA',
+
+        SLOVENSKA_POSTA = 'SLOVENSKA_POSTA';
+
 
     static $ids = array(
         self::CESKA_POSTA,
@@ -64,6 +67,8 @@ class Delivery{
         self::ULOZENKA,
         self::VLASTNI_PREPRAVA,
         self::ZASILKOVNA,
+
+        self::SLOVENSKA_POSTA,
     );
 
     /** @var string */
