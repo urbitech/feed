@@ -28,6 +28,11 @@ class Item extends BaseItem {
 
     /** @var Delivery|null */
     protected $delivery;
+
+
+    /** @var Delivery[] */
+    protected $deliveries;
+
     #recomanded
     /** @var string|null */
     protected $itemId;
@@ -616,8 +621,24 @@ class Item extends BaseItem {
     }
 
 
+    /**
+     * @param Delivery $delivery
+     * @return $this
+     */
+    public function addDelivery(Delivery $delivery)
+    {
+        $this->deliveries[] = $delivery;
 
+        return $this;
+    }
 
+    /**
+     * @return Delivery[]
+     */
+    public function getDeliveries()
+    {
+        return $this->deliveries;
+    }
 
 
 
