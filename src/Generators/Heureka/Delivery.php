@@ -16,6 +16,7 @@ class Delivery{
 
     CONST CESKA_POSTA = 'CESKA_POSTA',
         CESKA_POSTA_NA_POSTU = 'CESKA_POSTA_NA_POSTU',
+        CESKA_POSTA_DOPORUCENA_ZASILKA = 'CESKA_POSTA_DOPORUCENA_ZASILKA',
         CSAD_LOGISTIK_OSTRAVA = 'CSAD_LOGISTIK_OSTRAVA',
         DPD = 'DPD',
         DHL = 'DHL',
@@ -45,6 +46,7 @@ class Delivery{
     static $ids = array(
         self::CESKA_POSTA,
         self::CESKA_POSTA_NA_POSTU,
+        self::CESKA_POSTA_DOPORUCENA_ZASILKA,
         self::CSAD_LOGISTIK_OSTRAVA,
         self::DPD,
         self::DHL,
