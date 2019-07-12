@@ -17,6 +17,7 @@ class Parameter {
     protected $name;
     protected $value;
     protected $unit;
+    protected $percentage;
 
     /**
      * Parameter constructor.
@@ -24,12 +25,13 @@ class Parameter {
      * @param $value
      * @param $unit
      */
-    public function __construct($name, $value, $unit = null)
+    public function __construct($name, $value, $unit = null, $percentage = null)
     {
         $this->name = $name;
         $this->value = $value;
 
         $this->unit = $unit;
+        $this->percentage = $percentage;
     }
 
     /**
@@ -54,6 +56,15 @@ class Parameter {
     public function getUnit() {
         return $this->unit;
     }
+
+    /**
+     * @return null
+     */
+    public function getPercentage() {
+        return $this->percentage;
+    }
+
+
 
 
 }
