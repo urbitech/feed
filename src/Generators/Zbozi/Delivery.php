@@ -17,6 +17,7 @@ class Delivery{
     CONST CESKA_POSTA = 'CESKA_POSTA',
         CESKA_POSTA_NA_POSTU = 'CESKA_POSTA_NA_POSTU',
         CSAD_LOGISTIK_OSTRAVA = 'CSAD_LOGISTIK_OSTRAVA',
+        SLOVENSKA_POSTA = 'SLOVENSKA_POSTA',
         DPD = 'DPD',
         DHL = 'DHL',
         DSV = 'DSV',
@@ -64,6 +65,7 @@ class Delivery{
         self::ULOZENKA,
         self::VLASTNI_PREPRAVA,
         self::ZASILKOVNA,
+        self::SLOVENSKA_POSTA,
     );
 
     /** @var string */
