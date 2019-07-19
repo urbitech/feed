@@ -1,6 +1,6 @@
 <?php
 
-namespace Mk\Feed\Generators\Heureka;
+namespace Mk\Feed\Generators\HeurekaAvailability;
 
 use Nette\Caching\Cache;
 use Nette\Caching\IStorage;

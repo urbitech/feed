@@ -537,6 +537,14 @@ class Item extends BaseItem {
         return $this;
     }
 
+    /**
+     * @return Depot[]
+     */
+    public function getDepots(): array {
+        return $this->depots;
+    }
+
+
 
 
 

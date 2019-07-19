@@ -1,5 +1,5 @@
 <?php
-namespace Mk\Feed\Generators\Heureka;
+namespace Mk\Feed\Generators\HeurekaAvailability;
 
 use Mk\Feed\Generators\BaseGenerator;
 
