@@ -40,6 +40,7 @@ class Delivery{
         VLASTNI_PREPRAVA = 'VLASTNI_PREPRAVA',
         ZASILKOVNA = 'ZASILKOVNA';
 
+
     static $ids = array(
         self::CESKA_POSTA,
         self::CESKA_POSTA_NA_POSTU,
