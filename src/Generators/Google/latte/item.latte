@@ -14,7 +14,7 @@
 
     <g:condition n:if="$item->condition">{$item->condition}</g:condition>
     <g:availability n:if="$item->availability">{$item->availability}</g:availability>
-    <g:price>{$item->price} CZK</g:price>
+    <g:price>{$item->price} {$item->currency}</g:price>
     <g:identifier_exists>{$item->identifierExists ? 'TRUE' : 'FALSE'}</g:identifier_exists>
     <g:sale_price n:if="$item->salePrice">{$item->salePrice}</g:sale_price>
     <g:gtin>{if $item->gtin}{$item->gtin}{/if}</g:gtin>

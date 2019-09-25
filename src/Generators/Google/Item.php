@@ -95,6 +95,9 @@ class Item extends BaseItem {
     /** @var array */
     protected $params;
 
+    /** @var string */
+    protected $currency;
+
     /**
      * @return string
      */
@@ -480,6 +483,22 @@ class Item extends BaseItem {
      */
     public function getParams(): array {
         return $this->params;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCurrency(): string {
+        return $this->currency;
+    }
+
+    /**
+     * @param string $currency
+     * @return Item
+     */
+    public function setCurrency(string $currency): Item {
+        $this->currency = $currency;
+        return $this;
     }
 
 
