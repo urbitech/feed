@@ -137,8 +137,8 @@ class Item extends BaseItem {
         return $this;
     }
 
-    public function addDepot($id, $stock) {
-        $this->depots[] = new Depot($id, $stock);
+    public function addDepot($id, $stock, $orderDeadline, $orderDeliveryTime) {
+        $this->depots[] = new Depot($id, $stock, $orderDeadline, $orderDeliveryTime);
 
         return $this;
     }
