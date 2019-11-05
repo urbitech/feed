@@ -545,7 +545,7 @@ class Item extends BaseItem {
      * @param string $code
      * @return Item
      */
-    public function setCode(string $code): Item {
+    public function setCode(?string $code): Item {
         $this->code = $code;
         return $this;
     }
@@ -588,7 +588,7 @@ class Item extends BaseItem {
      * @param string $vat
      * @return Item
      */
-    public function setVat(string $vat): Item {
+    public function setVat(?string $vat): Item {
         $this->vat = $vat;
         return $this;
     }
@@ -604,7 +604,7 @@ class Item extends BaseItem {
      * @param float $weight
      * @return Item
      */
-    public function setWeight(float $weight): Item {
+    public function setWeight(?float $weight): Item {
         $this->weight = $weight;
         return $this;
     }
@@ -620,7 +620,7 @@ class Item extends BaseItem {
      * @param string $sku
      * @return Item
      */
-    public function setSku(string $sku): Item {
+    public function setSku(?string $sku): Item {
         $this->sku = $sku;
         return $this;
     }
@@ -636,7 +636,7 @@ class Item extends BaseItem {
      * @param string $name
      * @return Item
      */
-    public function setName(string $name): Item {
+    public function setName(?string $name): Item {
         $this->name = $name;
         return $this;
     }
