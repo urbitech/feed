@@ -103,8 +103,9 @@ class Item extends BaseItem {
     /** @var float */
     protected $weight;
 
-    /** @var string */
-    protected $sku;
+    /** @var Variant[] */
+    protected $variants = [];
+
 
     /**
      * @return float
@@ -656,6 +657,16 @@ class Item extends BaseItem {
         return $this;
     }
 
+    /**
+     * @return Variant[]
+     */
+    public function getVariants(): array {
+        return $this->variants;
+    }
+
+    public function addVariant(Variant $variant) {
+        $this->variants[] = $variant;
+    }
 
 
 
