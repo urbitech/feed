@@ -19,17 +19,35 @@ class Item extends BaseItem {
     /** @var string @required */
     protected $productName;
 
+    /** @var string @required */
+    protected $name;
+
+    /** @var string @required */
+    protected $nameExt;
+
+    /** @var string @required */
+    protected $code;
+
     /** @var string|null */
     protected $product;
 
     /** @var string @required */
     protected $description;
 
+    /** @var string @required */
+    protected $shortDescription;
+
+    /** @var string @required */
+    protected $warranty;
+
     /**  @var string @required */
     protected $url;
 
     /** @var Image[] */
     protected $images = array();
+
+    /** @var string[] */
+    protected $categories = array();
 
     /** @var string|null */
     protected $videoUrl;
@@ -75,6 +93,18 @@ class Item extends BaseItem {
 
     /** @var Gift[] */
     protected $gifts = array();
+
+    /** @var string */
+    protected $availability;
+
+    /** @var string */
+    protected $vat;
+
+    /** @var float */
+    protected $weight;
+
+    /** @var string */
+    protected $sku;
 
     /**
      * @return float
@@ -470,5 +500,165 @@ class Item extends BaseItem {
 
         return $this;
     }
+
+    /**
+     * @return string
+     */
+    public function getShortDescription(): string {
+        return $this->shortDescription;
+    }
+
+    /**
+     * @param string $shortDescription
+     * @return Item
+     */
+    public function setShortDescription(string $shortDescription): Item {
+        $this->shortDescription = $shortDescription;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getWarranty(): ?string {
+        return $this->warranty;
+    }
+
+    /**
+     * @param string $warranty
+     * @return Item
+     */
+    public function setWarranty(string $warranty): Item {
+        $this->warranty = $warranty;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCode(): string {
+        return $this->code;
+    }
+
+    /**
+     * @param string $code
+     * @return Item
+     */
+    public function setCode(string $code): Item {
+        $this->code = $code;
+        return $this;
+    }
+
+    public function addCategory(string $category) {
+        $this->categories[] = $category;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getCategories(): array {
+        return $this->categories;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAvailability(): string {
+        return $this->availability;
+    }
+
+    /**
+     * @param string $availability
+     * @return Item
+     */
+    public function setAvailability(string $availability): Item {
+        $this->availability = $availability;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getVat(): string {
+        return $this->vat;
+    }
+
+    /**
+     * @param string $vat
+     * @return Item
+     */
+    public function setVat(string $vat): Item {
+        $this->vat = $vat;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getWeight(): string {
+        return $this->weight;
+    }
+
+    /**
+     * @param float $weight
+     * @return Item
+     */
+    public function setWeight(float $weight): Item {
+        $this->weight = $weight;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSku(): ?string {
+        return $this->sku;
+    }
+
+    /**
+     * @param string $sku
+     * @return Item
+     */
+    public function setSku(string $sku): Item {
+        $this->sku = $sku;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName(): ?string {
+        return $this->name;
+    }
+
+    /**
+     * @param string $name
+     * @return Item
+     */
+    public function setName(string $name): Item {
+        $this->name = $name;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNameExt(): ?string {
+        return $this->nameExt;
+    }
+
+    /**
+     * @param string $nameExt
+     * @return Item
+     */
+    public function setNameExt(string $nameExt): Item {
+        $this->nameExt = $nameExt;
+        return $this;
+    }
+
+
+
+
+
 
 }
