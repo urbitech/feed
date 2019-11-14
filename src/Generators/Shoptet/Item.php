@@ -505,7 +505,7 @@ class Item extends BaseItem {
     /**
      * @return string
      */
-    public function getShortDescription(): string {
+    public function getShortDescription(): ?string {
         return $this->shortDescription;
     }
 
@@ -513,7 +513,7 @@ class Item extends BaseItem {
      * @param string $shortDescription
      * @return Item
      */
-    public function setShortDescription(string $shortDescription): Item {
+    public function setShortDescription(?string $shortDescription): Item {
         $this->shortDescription = $shortDescription;
         return $this;
     }
@@ -529,7 +529,7 @@ class Item extends BaseItem {
      * @param string $warranty
      * @return Item
      */
-    public function setWarranty(string $warranty): Item {
+    public function setWarranty(?string $warranty): Item {
         $this->warranty = $warranty;
         return $this;
     }
@@ -537,7 +537,7 @@ class Item extends BaseItem {
     /**
      * @return string
      */
-    public function getCode(): string {
+    public function getCode(): ?string {
         return $this->code;
     }
 
@@ -564,7 +564,7 @@ class Item extends BaseItem {
     /**
      * @return string
      */
-    public function getAvailability(): string {
+    public function getAvailability(): ?string {
         return $this->availability;
     }
 
@@ -572,7 +572,7 @@ class Item extends BaseItem {
      * @param string $availability
      * @return Item
      */
-    public function setAvailability(string $availability): Item {
+    public function setAvailability(?string $availability): Item {
         $this->availability = $availability;
         return $this;
     }
@@ -580,7 +580,7 @@ class Item extends BaseItem {
     /**
      * @return string
      */
-    public function getVat(): string {
+    public function getVat(): ?string {
         return $this->vat;
     }
 
@@ -596,7 +596,7 @@ class Item extends BaseItem {
     /**
      * @return string
      */
-    public function getWeight(): string {
+    public function getWeight(): ?string {
         return $this->weight;
     }
 
@@ -652,7 +652,7 @@ class Item extends BaseItem {
      * @param string $nameExt
      * @return Item
      */
-    public function setNameExt(string $nameExt): Item {
+    public function setNameExt(?string $nameExt): Item {
         $this->nameExt = $nameExt;
         return $this;
     }

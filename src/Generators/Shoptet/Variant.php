@@ -36,7 +36,7 @@ class Variant
     /**
      * @return string
      */
-    public function getCode(): string {
+    public function getCode(): ?string {
         return $this->code;
     }
 
@@ -44,7 +44,7 @@ class Variant
      * @param string $code
      * @return Variant
      */
-    public function setCode(string $code): Variant {
+    public function setCode(?string $code): Variant {
         $this->code = $code;
         return $this;
     }
@@ -76,7 +76,7 @@ class Variant
      * @param string $vat
      * @return Variant
      */
-    public function setVat(string $vat): Variant {
+    public function setVat(?string $vat): Variant {
         $this->vat = $vat;
         return $this;
     }
@@ -92,7 +92,7 @@ class Variant
      * @param float $weight
      * @return Variant
      */
-    public function setWeight(float $weight): Variant {
+    public function setWeight(?float $weight): Variant {
         $this->weight = $weight;
         return $this;
     }
@@ -124,7 +124,7 @@ class Variant
      * @param string $availability
      * @return Variant
      */
-    public function setAvailability(string $availability): Variant {
+    public function setAvailability(?string $availability): Variant {
         $this->availability = $availability;
         return $this;
     }
