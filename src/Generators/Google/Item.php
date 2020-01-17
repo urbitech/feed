@@ -8,6 +8,23 @@ use Mk\Feed\Generators\BaseItem;
 /**
  * Class Item
  * @property string $id
+ * @property  $title
+ * @property  $description
+ * @property  $link
+ * @property  $images
+ * @property  $condition
+ * @property  $availability
+ * @property  $price
+ * @property  $currency
+ * @property  $identifierExists
+ * @property  $salePrice
+ * @property  $gtin
+ * @property  $brand
+ * @property  $labels
+ * @property  $mpn
+ * @property  $productTypes
+ * @property  $googleProductCategory
+ * @property  $itemGroupId
  * @author Martin Knor <martin.knor@gmail.com>
  * @package Mk\Feed\Generators\Google
  */

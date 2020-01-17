@@ -508,7 +508,7 @@ class Item extends BaseItem {
     /**
      * @return \DateTime
      */
-    public function getOrderDeadline(): \DateTime {
+    public function getOrderDeadline(): ?\DateTime {
         return $this->orderDeadline;
     }
 
@@ -524,7 +524,7 @@ class Item extends BaseItem {
     /**
      * @return \DateTime
      */
-    public function getOrderDeliveryTime(): \DateTime {
+    public function getOrderDeliveryTime(): ?\DateTime {
         return $this->orderDeliveryTime;
     }
 

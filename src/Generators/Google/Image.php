@@ -6,6 +6,7 @@ namespace Mk\Feed\Generators\Google;
 use Mk, Nette;
 
 /**
+ * @property $url
  * Class Image
  * @author Martin Knor <martin.knor@gmail.com>
  * @package Mk\Feed\Generators\Google

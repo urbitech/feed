@@ -6,6 +6,7 @@ use Mk;
 use Nette;
 
 /**
+ * @property $text
  * Class ProductType
  * @author Martin Knor <martin.knor@gmail.com>
  * @package Mk\Feed\Generators\Google

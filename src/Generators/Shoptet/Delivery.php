@@ -93,7 +93,7 @@ class Delivery{
         }
         $this->id = (string) $id;
         $this->price = (float) $price;
-        $this->priceCod = isset($priceCod) ? (float) $priceCod : null;
+        $this->priceCod = $priceCod !== null ? (float) $priceCod : null;
     }
 
     /**
