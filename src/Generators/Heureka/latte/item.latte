@@ -1,6 +1,6 @@
 {contentType xml}
 <SHOPITEM>
-    <ITEM_ID n:ifset="$item->getItemId()">{$item->getItemId()}</ITEM_ID>
+    <ITEM_ID n:if="$item->getItemId()">{$item->getItemId()}</ITEM_ID>
     <PRODUCTNAME><![CDATA[{$item->getProductName()}]]></PRODUCTNAME>
     <PRODUCT n:if="$item->getProduct()"><![CDATA[{$item->getProduct()}]]></PRODUCT>
     <DESCRIPTION><![CDATA[{$item->getDescription()|striptags|noescape}]]></DESCRIPTION>
