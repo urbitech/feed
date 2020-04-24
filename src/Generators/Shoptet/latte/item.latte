@@ -8,7 +8,7 @@
     <URL>{$item->getUrl()}</URL>
 
     <IMAGES>
-        <IMAGE n:foreach="$images as $image">
+        <IMAGE n:foreach="$item->getImages() as $image">
             {$image->getUrl()}
         </IMAGE>
     </IMAGES>
