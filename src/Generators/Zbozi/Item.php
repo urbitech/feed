@@ -26,6 +26,13 @@ class Item extends BaseItem {
     /** @var \DateTime|int @required */
     protected $deliveryDate;
 
+    /** @var Delivery|null */
+    protected $delivery;
+
+
+    /** @var Delivery[] */
+    protected $deliveries;
+
     #recomanded
     /** @var string|null */
     protected $itemId;
@@ -596,5 +603,44 @@ class Item extends BaseItem {
     {
         return $this->parameters;
     }
+
+    /**
+     * @return Delivery|null
+     */
+    public function getDelivery() {
+        return $this->delivery;
+    }
+
+    /**
+     * @param Delivery|null $delivery
+     * @return Item
+     */
+    public function setDelivery($delivery) {
+        $this->delivery = $delivery;
+        return $this;
+    }
+
+
+    /**
+     * @param Delivery $delivery
+     * @return $this
+     */
+    public function addDelivery(Delivery $delivery)
+    {
+        $this->deliveries[] = $delivery;
+
+        return $this;
+    }
+
+    /**
+     * @return Delivery[]
+     */
+    public function getDeliveries()
+    {
+        return $this->deliveries;
+    }
+
+
+
 
 }

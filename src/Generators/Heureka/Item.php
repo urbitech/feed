@@ -152,9 +152,9 @@ class Item extends BaseItem {
      * @param null $unit
      * @return Item
      */
-    public function addParameter($name, $val, $unit = null)
+    public function addParameter($name, $val, $unit = null, $percentage = null)
     {
-        $this->parameters[] = new Parameter($name, $val, $unit);
+        $this->parameters[] = new Parameter($name, $val, $unit, $percentage);
 
         return $this;
     }

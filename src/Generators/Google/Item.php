@@ -7,6 +7,24 @@ use Mk\Feed\Generators\BaseItem;
 
 /**
  * Class Item
+ * @property string $id
+ * @property  $title
+ * @property  $description
+ * @property  $link
+ * @property  $images
+ * @property  $condition
+ * @property  $availability
+ * @property  $price
+ * @property  $currency
+ * @property  $identifierExists
+ * @property  $salePrice
+ * @property  $gtin
+ * @property  $brand
+ * @property  $labels
+ * @property  $mpn
+ * @property  $productTypes
+ * @property  $googleProductCategory
+ * @property  $itemGroupId
  * @author Martin Knor <martin.knor@gmail.com>
  * @package Mk\Feed\Generators\Google
  */
@@ -90,6 +108,15 @@ class Item extends BaseItem {
 	
     /** @var string */
     protected $unitPricingMeasure;
+
+    /** @var string */
+    protected $itemGroupId;
+
+    /** @var array */
+    protected $params;
+
+    /** @var string */
+    protected $currency;
 
     /**
      * @return string
@@ -463,5 +490,53 @@ class Item extends BaseItem {
 	{
 		$this->unitPricingMeasure = $unitPricingMeasure;
 	}
+
+    /**
+     * @return string
+     */
+    public function getItemGroupId(): ?string {
+        return $this->itemGroupId;
+    }
+
+    /**
+     * @param string $itemGroupId
+     */
+    public function setItemGroupId(string $itemGroupId): void {
+        $this->itemGroupId = $itemGroupId;
+    }
+
+    public function addParam($name, $value){
+        $this->params[$name] = $value;
+    }
+
+    /**
+     * @return array
+     */
+    public function getParams(): array {
+        return $this->params;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCurrency(): string {
+        return $this->currency;
+    }
+
+    /**
+     * @param string $currency
+     * @return Item
+     */
+    public function setCurrency(string $currency): Item {
+        $this->currency = $currency;
+        return $this;
+    }
+
+
+
+
+
+
+
 
 }
