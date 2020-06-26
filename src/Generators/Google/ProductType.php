@@ -6,15 +6,13 @@ use Mk;
 use Nette;
 
 /**
- * @property $text
  * Class ProductType
  * @author Martin Knor <martin.knor@gmail.com>
  * @package Mk\Feed\Generators\Google
  */
-class ProductType {
+class ProductType{
 
-    /* Použití smartobject viz php 7.2 to nette 2.4 */
-    use \Nette\SmartObject;
+    use Nette\SmartObject;
 
     /** @var string */
     protected $text;

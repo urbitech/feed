@@ -10,10 +10,10 @@ use Nette;
  * @author Martin Knor <martin.knor@gmail.com>
  * @package Mk\Feed\Generators\Zbozi
  */
-class CategoryText {
+class CategoryText{
 
-    /* Použití smartobject viz php 7.2 to nette 2.4 */
-    use \Nette\SmartObject;
+    use Nette\SmartObject;
+
 
     /** @var string */
     protected $text;

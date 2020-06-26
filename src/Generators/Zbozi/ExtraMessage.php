@@ -10,9 +10,9 @@ use Nette;
  * @author Martin Knor <martin.knor@gmail.com>
  * @package Mk\Feed\Generators\Zbozi
  */
-class ExtraMessage {
-    /* Použití smartobject viz php 7.2 to nette 2.4 */
-    use \Nette\SmartObject;
+class ExtraMessage{
+
+    use Nette\SmartObject;
 
     CONST EXTENDED_WARRANTY = 'extended_warranty',
         FREE_ACCESSORIES = 'free_accessories',

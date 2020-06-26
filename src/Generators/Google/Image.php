@@ -6,15 +6,14 @@ namespace Mk\Feed\Generators\Google;
 use Mk, Nette;
 
 /**
- * @property $url
  * Class Image
  * @author Martin Knor <martin.knor@gmail.com>
  * @package Mk\Feed\Generators\Google
  */
 class Image
 {
-    /* Použití smartobject viz php 7.2 to nette 2.4 */
-    use \Nette\SmartObject;
+
+    use Nette\SmartObject;
 
     /** @var string */
     private $url;

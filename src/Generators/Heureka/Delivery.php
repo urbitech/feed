@@ -11,12 +11,10 @@ use Mk, Nette;
  */
 class Delivery{
 
-    /* Použití smartobject viz php 7.2 to nette 2.4 */
-    use \Nette\SmartObject;
+    use Nette\SmartObject;
 
     CONST CESKA_POSTA = 'CESKA_POSTA',
         CESKA_POSTA_NA_POSTU = 'CESKA_POSTA_NA_POSTU',
-        CESKA_POSTA_DOPORUCENA_ZASILKA = 'CESKA_POSTA_DOPORUCENA_ZASILKA',
         CSAD_LOGISTIK_OSTRAVA = 'CSAD_LOGISTIK_OSTRAVA',
         DPD = 'DPD',
         DHL = 'DHL',
@@ -36,17 +34,11 @@ class Delivery{
         TNT = 'TNT',
         TOPTRANS = 'TOPTRANS',
         UPS = 'UPS',
-        ULOZENKA = 'ULOZENKA',
-        VLASTNI_PREPRAVA = 'VLASTNI_PREPRAVA',
-        ZASILKOVNA = 'ZASILKOVNA',
-
-        SLOVENSKA_POSTA = 'SLOVENSKA_POSTA';
-
+        VLASTNI_PREPRAVA = 'VLASTNI_PREPRAVA';
 
     static $ids = array(
         self::CESKA_POSTA,
         self::CESKA_POSTA_NA_POSTU,
-        self::CESKA_POSTA_DOPORUCENA_ZASILKA,
         self::CSAD_LOGISTIK_OSTRAVA,
         self::DPD,
         self::DHL,
@@ -66,11 +58,7 @@ class Delivery{
         self::TNT,
         self::TOPTRANS,
         self::UPS,
-        self::ULOZENKA,
         self::VLASTNI_PREPRAVA,
-        self::ZASILKOVNA,
-
-        self::SLOVENSKA_POSTA,
     );
 
     /** @var string */

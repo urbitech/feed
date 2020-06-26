@@ -1,9 +1,9 @@
 <?php
-
 namespace Mk\Feed\Generators;
 
 use Latte\Engine;
 use Mk\Feed\Storage;
+use Nette\SmartObject;
 use Mk\Feed\FileEmptyException;
 use Mk\Feed\ItemIncompletedException;
 
@@ -14,8 +14,7 @@ use Mk\Feed\ItemIncompletedException;
  */
 abstract class BaseGenerator implements IGenerator {
 
-    /* Použití smartobject viz php 7.2 to nette 2.4 */
-    use \Nette\SmartObject;
+    use SmartObject;
 
     /** @var bool true if some products added */
     private $prepared = false;
@@ -26,18 +25,6 @@ abstract class BaseGenerator implements IGenerator {
     /** @var \Mk\Feed\Storage */
     private $storage;
 
-    /** @var array */
-    private $config;
-
-    /** @var string */
-    private $link;
-
-    /** @var string */
-    private $description;
-
-    /** @var string */
-    private $storeName;
-
     /**
      * BaseGenerator constructor.
      * @param \Mk\Feed\Storage $storage
@@ -46,30 +33,6 @@ abstract class BaseGenerator implements IGenerator {
     {
         $this->storage = $storage;
     }
-
-    /**
-     * @param string $link
-     */
-    public function setLink(string $link): void {
-        $this->link = $link;
-    }
-
-    /**
-     * @param string $description
-     */
-    public function setDescription(string $description): void {
-        $this->description = $description;
-    }
-
-    /**
-     * @param string $storeName
-     */
-    public function setStoreName(string $storeName): void {
-        $this->storeName = $storeName;
-    }
-
-
-
 
     /**
      * @param $name
@@ -84,7 +47,6 @@ abstract class BaseGenerator implements IGenerator {
     protected function prepare()
     {
         $this->handle = tmpfile();
-
         $this->prepareTemplate('header');
         $this->prepared = true;
     }
@@ -143,15 +105,11 @@ abstract class BaseGenerator implements IGenerator {
      */
     protected function prepareTemplate($template)
     {
-
-        $latte = new Engine;
-        $content = $latte->renderToString($this->getTemplate($template), array('storeName' => $this->storeName, 'description' => $this->description, 'link' => $this->link));
         $file = $this->getTemplate($template);
         $footerHandle = fopen('safe://' . $file, 'r');
         $footer = fread($footerHandle, filesize($file));
         fclose($footerHandle);
-        fwrite($this->handle, $content);
-//        fwrite($this->handle, $footer);
+        fwrite($this->handle, $footer);
     }
 
 }

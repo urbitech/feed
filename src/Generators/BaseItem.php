@@ -13,15 +13,14 @@ use Mk, Nette;
 abstract class BaseItem implements Mk\Feed\Generators\IItem
 {
 
-	/* Použití smartobject viz php 7.2 to nette 2.4 */
-	use \Nette\SmartObject;
+    use Nette\SmartObject;
+
 	/**
 	 * Validate item
 	 * @return bool return true if item is valid
      */
 	public function validate() {
-
-		$reflection = new Nette\Reflection\ClassType(get_called_class());
+		$reflection = $this->getReflection();
 
 		foreach ($reflection->getProperties(\ReflectionProperty::IS_PUBLIC) as $v) {
 			if ($v->getAnnotation('required')) {
@@ -33,5 +32,4 @@ abstract class BaseItem implements Mk\Feed\Generators\IItem
 
 		return TRUE;
 	}
-
 }

@@ -10,10 +10,9 @@ use Mk, Nette;
  * @package Mk\Feed\Generators\Zbozi
  * @see http://napoveda.seznam.cz/cz/zbozi/specifikace-xml-pro-obchody/specifikace-xml-feedu/#PARAM
  */
-class Parameter {
+class Parameter{
 
-    /* Použití smartobject viz php 7.2 to nette 2.4 */
-    use \Nette\SmartObject;
+    use Nette\SmartObject;
 
     protected $name;
     protected $value;
