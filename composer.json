@@ -1,18 +1,19 @@
 {
-	"name": "makr/feed",
+	"name": "urbitech/feed",
 	"description": "Nette extension for export xml feeds",
 	"keywords": [
 		"nette",
 		"heureka",
 		"zbozi",
-	  	"merchant"
+	  	"merchant",
+		"glami"
 	],
 	"license": [
 		"MIT"
 	],
 	"authors": [
 		{
-			"name": "Martin Knor"
+			"name": "Martin Knor / Urbitech"
 		}
 	],
 	"require": {
