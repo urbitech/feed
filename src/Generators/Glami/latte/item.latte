@@ -1,0 +1,40 @@
+{contentType xml}
+<SHOPITEM>
+    <ITEM_ID n:if="$item->getItemId()">{$item->getItemId()}</ITEM_ID>
+    <ITEMGROUP_ID n:if="$item->getItemGroupId()">{$item->getItemGroupId()}</ITEMGROUP_ID>
+    <PRODUCTNAME>{$item->getProductName()}</PRODUCTNAME>
+    <DESCRIPTION><![CDATA[{$item->getDescription()|striptags|noescape}]]></DESCRIPTION>
+    <URL>{$item->getUrl()}</URL>
+    <IMGURL>{$item->getImgUrl()}</IMGURL>
+    {if !empty($images = $item->getImages())}
+        <IMGURL_ALTERNATIVE n:foreach="$images as $image">{$image->getUrl()}</IMGURL_ALTERNATIVE>
+    {/if}    
+    <PRICE_VAT>{$item->getPriceVat()}</PRICE_VAT>
+    <MANUFACTURER n:if="$item->getManufacturer()">{$item->getManufacturer()}</MANUFACTURER>
+
+    {if !empty($categoryTexts = $item->getCategoryTexts())}
+        <CATEGORYTEXT n:foreach="$categoryTexts as $categoryText" n:if="!empty($categoryText->getText())">{$categoryText->getText()}</CATEGORYTEXT>
+    {/if}
+
+    <GLAMI_CPC n:if="$item->getGlamiCPC()">{$item->getGlamiCPC()}</GLAMI_CPC>
+
+    {if !empty($sizes = $item->getSize())}
+        <PARAM n:foreach="$sizes as $size">
+            <PARAM_NAME>{$size->getName()}</PARAM_NAME>
+            <VAL>{$size->getValue()}</VAL>
+        </PARAM>
+    {/if}
+
+    <PARAM n:if="$item->getSizeSystem()">
+        <PARAM_NAME>size_system</PARAM_NAME>
+        <VAL>{$item->getSizeSystem()}</VAL>
+    </PARAM>
+
+
+    <DELIVERY_DATE n:if="$item->getDeliveryDate() !== null">{$item->getDeliveryDate()}</DELIVERY_DATE>
+    <DELIVERY n:foreach="$item->getDeliveries() as $delivery">
+        <DELIVERY_ID>{$delivery->getId()}</DELIVERY_ID>
+        <DELIVERY_PRICE>{$delivery->getPrice()}</DELIVERY_PRICE>
+        <DELIVERY_PRICE_COD n:if="$delivery->getPriceCod()">{$delivery->getPriceCod()}</DELIVERY_PRICE_COD>
+    </DELIVERY>
+</SHOPITEM>
