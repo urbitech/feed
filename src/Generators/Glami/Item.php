@@ -42,6 +42,12 @@ class Item extends BaseItem
     protected $parameters = array();
     /** @var Parameter[] */
     protected $sizes = array();
+    /** @var string|null */
+    protected $sizeSystem;
+    /** @var decimal|null */
+    protected $glamiCPC;
+    /** @var string|null */
+    protected $imgUrl;
 
     /**
      * @param $url
