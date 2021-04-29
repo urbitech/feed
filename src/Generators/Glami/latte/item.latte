@@ -16,6 +16,10 @@
         <CATEGORYTEXT n:foreach="$categoryTexts as $categoryText" n:if="!empty($categoryText->getText())">{$categoryText->getText()}</CATEGORYTEXT>
     {/if}
 
+    {if $item->getEan()}
+        <EAN>{$item->getEan()}</EAN>
+    {/if}
+    
     <GLAMI_CPC n:if="$item->getGlamiCPC()">{$item->getGlamiCPC()}</GLAMI_CPC>
 
     {if !empty($sizes = $item->getSize())}

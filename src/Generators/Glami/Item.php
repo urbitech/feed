@@ -48,6 +48,8 @@ class Item extends BaseItem
     protected $glamiCPC;
     /** @var string|null */
     protected $imgUrl;
+    /** @var string|null */
+    protected $ean;
 
     /**
      * @param $url
@@ -397,5 +399,24 @@ class Item extends BaseItem
     public function getSize()
     {
         return $this->sizes;
+    }
+
+    /**
+     * @return null|string
+     */
+    public function getEan()
+    {
+        return $this->ean;
+    }
+
+    /**
+     * @param null|string $ean
+     * @return Item
+     */
+    public function setEan($ean)
+    {
+        $this->ean = $ean;
+
+        return $this;
     }
 }
