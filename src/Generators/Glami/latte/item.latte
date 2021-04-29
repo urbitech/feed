@@ -34,6 +34,13 @@
         <VAL>{$item->getSizeSystem()}</VAL>
     </PARAM>
 
+    {if !empty($parameters = $item->getParameters())}
+        <PARAM n:foreach="$parameters as $parameter">
+            <PARAM_NAME>{$parameter->getName()}</PARAM_NAME>
+            <VAL>{$parameter->getValue()}</VAL>
+            <UNIT n:if="!empty($parameter->getUnit())">{$parameter->getUnit()}</UNIT>
+        </PARAM>
+    {/if}
 
     <DELIVERY_DATE n:if="$item->getDeliveryDate() !== null">{$item->getDeliveryDate()}</DELIVERY_DATE>
     <DELIVERY n:foreach="$item->getDeliveries() as $delivery">
